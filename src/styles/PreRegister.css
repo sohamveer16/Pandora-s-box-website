@@ -1,0 +1,316 @@
+/* ==========================================================================
+   Pre-Register Styling — Arcane Enlistment Altar & Completion States
+   ========================================================================== */
+
+.preregister-section {
+  position: relative;
+  background: #020711;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 243, 255, 0.08);
+}
+
+.prereg-ambient-flare {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70vw;
+  height: 300px;
+  background: radial-gradient(ellipse at center, rgba(0, 243, 255, 0.08) 0%, rgba(2, 7, 17, 0) 70%);
+  pointer-events: none;
+}
+
+.preregister-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.preregister-title {
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.preregister-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Altar / Terminal Card */
+.preregister-altar-card {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 32px 36px;
+  background: rgba(7, 20, 34, 0.92);
+  border: 2px solid #16385d;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8), 0 0 24px rgba(0, 243, 255, 0.08);
+}
+
+.altar-header-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+  margin-bottom: 28px;
+}
+
+.altar-seal-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.altar-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-cyan-glow);
+  box-shadow: 0 0 8px var(--color-cyan-glow);
+  border-radius: 50%;
+}
+
+.altar-terminal-tag {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  color: var(--color-cyan-bright);
+}
+
+.altar-protocol {
+  font-size: 0.72rem;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+/* Form Groups */
+.prereg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: var(--color-text-primary);
+}
+
+.label-req {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.pixel-input-wrapper {
+  position: relative;
+}
+
+.pixel-input {
+  width: 100%;
+  background: #040d17;
+  border: 2px solid #1c3d61;
+  color: #ffffff;
+  padding: 14px 18px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.pixel-input:focus {
+  border-color: var(--color-cyan-bright);
+  box-shadow: 0 0 16px rgba(0, 243, 255, 0.35);
+  background: #061322;
+}
+
+.pixel-input::placeholder {
+  color: #3b5370;
+  font-size: 0.9rem;
+}
+
+/* Platform Selector Buttons */
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.platform-btn {
+  background: #051424;
+  border: 2px solid #1a3c61;
+  color: var(--color-text-secondary);
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.platform-btn:hover {
+  background: #0b223d;
+  border-color: var(--color-cyan-dim);
+  color: #ffffff;
+}
+
+.platform-btn.is-selected {
+  background: rgba(0, 243, 255, 0.12);
+  border-color: var(--color-cyan-bright);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(0, 243, 255, 0.35);
+}
+
+.platform-check {
+  color: var(--color-cyan-glow);
+  font-size: 0.75rem;
+}
+
+/* Error Banner */
+.form-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(225, 29, 72, 0.15);
+  border: 1px solid var(--color-ruby);
+  color: #fca5a5;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+}
+
+/* Actions Row */
+.form-actions-row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.prereg-submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.15rem;
+}
+
+.spinner-rune {
+  animation: spinRune 1.5s infinite linear;
+  display: inline-block;
+  color: var(--color-cyan-glow);
+}
+
+@keyframes spinRune {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.form-disclaimer {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Success State Screen */
+.prereg-success-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.success-seal-animation {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(0, 243, 255, 0.1);
+  border: 2px solid var(--color-cyan-glow);
+  box-shadow: 0 0 24px rgba(0, 243, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: successPulse 2s infinite ease-in-out;
+}
+
+@keyframes successPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.success-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--color-cyan-bright);
+}
+
+.success-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.success-message {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.success-receipt-box {
+  width: 100%;
+  max-width: 560px;
+  padding: 16px 20px;
+  background: rgba(3, 10, 18, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 6px 0;
+  text-align: left;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: #64748b;
+}
+
+.success-placeholder-note {
+  font-size: 0.72rem;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+  .preregister-altar-card {
+    padding: 24px 18px;
+  }
+  .platform-grid {
+    grid-template-columns: 1fr;
+  }
+  .receipt-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

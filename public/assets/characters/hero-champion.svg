@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%" shape-rendering="crispEdges">
+  <defs>
+    <!-- Cyan Magic Aura Glow -->
+    <filter id="swordAura" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="charGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Glow Behind Champion -->
+  <circle cx="200" cy="300" r="160" fill="url(#charGlow)" />
+
+  <!-- Flowing Dark Cape Behind -->
+  <path d="M140,240 L80,500 L120,530 L170,510 L230,530 L270,490 L240,240 Z" fill="#0c1726" stroke="#162e4a" stroke-width="4" shape-rendering="auto"/>
+
+  <!-- Pixel Knight Silhouette / Sprite Anatomy -->
+  <!-- Shadow on ground -->
+  <ellipse cx="200" cy="540" rx="90" ry="16" fill="#030812" opacity="0.8" shape-rendering="auto"/>
+
+  <!-- Greaves / Legs -->
+  <rect x="155" y="420" width="30" height="90" fill="#1b2a40" stroke="#2d486b" stroke-width="2"/>
+  <rect x="215" y="420" width="30" height="90" fill="#1b2a40" stroke="#2d486b" stroke-width="2"/>
+  <!-- Sabatons / Boots -->
+  <rect x="145" y="495" width="45" height="25" fill="#0f1926" stroke="#2d486b" stroke-width="2"/>
+  <rect x="215" y="495" width="45" height="25" fill="#0f1926" stroke="#2d486b" stroke-width="2"/>
+  <rect x="160" y="440" width="20" height="15" fill="#00f3ff" opacity="0.6"/>
+  <rect x="220" y="440" width="20" height="15" fill="#00f3ff" opacity="0.6"/>
+
+  <!-- Tassets / Faulds / Skirt -->
+  <rect x="150" y="370" width="100" height="60" fill="#122033" stroke="#2d486b" stroke-width="2"/>
+  <rect x="175" y="375" width="50" height="50" fill="#1f3452"/>
+  <rect x="195" y="385" width="10" height="30" fill="#00f3ff" opacity="0.8"/>
+
+  <!-- Breastplate / Torso -->
+  <rect x="145" y="240" width="110" height="140" fill="#182c47" stroke="#3c6596" stroke-width="3"/>
+  <rect x="160" y="255" width="80" height="110" fill="#223e63"/>
+  <!-- Gold / Runic Crest on Chest -->
+  <polygon points="200,270 220,310 180,310" fill="#d4af37" stroke="#f6d565" stroke-width="1" shape-rendering="auto"/>
+  <circle cx="200" cy="295" r="5" fill="#00f3ff" shape-rendering="auto"/>
+
+  <!-- Pauldrons / Shoulder Armor -->
+  <rect x="115" y="235" width="40" height="50" fill="#223e63" stroke="#4878b0" stroke-width="2"/>
+  <rect x="245" y="235" width="40" height="50" fill="#223e63" stroke="#4878b0" stroke-width="2"/>
+
+  <!-- Arms / Gauntlets -->
+  <rect x="120" y="285" width="30" height="90" fill="#182c47" stroke="#2d486b" stroke-width="2"/>
+  <rect x="250" y="285" width="30" height="90" fill="#182c47" stroke="#2d486b" stroke-width="2"/>
+  
+  <!-- Flowing Red/Auburn Hair / Scarf (inspired by screenshot hero) -->
+  <rect x="160" y="160" width="80" height="80" fill="#7a2a1e" stroke="#481812" stroke-width="2"/>
+  <rect x="145" y="190" width="25" height="70" fill="#8f3325"/>
+  <rect x="230" y="190" width="25" height="70" fill="#8f3325"/>
+  
+  <!-- Great Helm / Face Visor -->
+  <rect x="165" y="150" width="70" height="75" fill="#1b2e49" stroke="#4878b0" stroke-width="2"/>
+  <rect x="175" y="175" width="50" height="15" fill="#050c14"/>
+  <!-- Glowing Eye / Visor Slit -->
+  <rect x="180" y="180" width="40" height="5" fill="#00f3ff"/>
+  <rect x="205" y="181" width="8" height="3" fill="#ffffff"/>
+
+  <!-- Celestial Runic Greatsword in Hand (Right) -->
+  <g filter="url(#swordAura)">
+    <!-- Crossguard & Hilt -->
+    <rect x="270" y="325" width="16" height="30" fill="#4d3d20" stroke="#d4af37" stroke-width="2"/>
+    <rect x="250" y="320" width="56" height="10" fill="#d4af37" stroke="#fae188" stroke-width="1"/>
+    <!-- Blade with Glowing Core -->
+    <rect x="273" y="110" width="10" height="210" fill="#b9f3ff" stroke="#00f3ff" stroke-width="2"/>
+    <polygon points="278,80 270,110 286,110" fill="#b9f3ff" stroke="#00f3ff" stroke-width="1" shape-rendering="auto"/>
+    <rect x="276" y="120" width="4" height="180" fill="#ffffff"/>
+    
+    <!-- Runic Markings on Blade -->
+    <text x="278" y="160" font-size="10" fill="#006699" font-family="monospace" text-anchor="middle" font-weight="bold">ᚦ</text>
+    <text x="278" y="190" font-size="10" fill="#006699" font-family="monospace" text-anchor="middle" font-weight="bold">ᛉ</text>
+    <text x="278" y="220" font-size="10" fill="#006699" font-family="monospace" text-anchor="middle" font-weight="bold">ᚨ</text>
+  </g>
+
+  <!-- Floating Sparkles / Embers -->
+  <rect x="110" y="180" width="4" height="4" fill="#00f3ff" opacity="0.8"/>
+  <rect x="280" y="90" width="5" height="5" fill="#ffffff" opacity="0.9"/>
+  <rect x="90" y="340" width="6" height="6" fill="#00f3ff" opacity="0.6"/>
+  <rect x="310" y="260" width="4" height="4" fill="#38bdf8" opacity="0.7"/>
+</svg>

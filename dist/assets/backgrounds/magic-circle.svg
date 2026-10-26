@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <defs>
+    <!-- Cyan Magic Radial Glow -->
+    <radialGradient id="runeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.8"/>
+      <stop offset="35%" stop-color="#00bcd4" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <filter id="cyanBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Stone Platform Base (3D Isometric Perspective) -->
+  <ellipse cx="300" cy="170" rx="280" ry="90" fill="#0b1726" stroke="#1c3b5e" stroke-width="6"/>
+  <ellipse cx="300" cy="182" rx="280" ry="90" fill="none" stroke="#060e17" stroke-width="12"/>
+
+  <!-- Magic Aura -->
+  <ellipse cx="300" cy="165" rx="250" ry="75" fill="url(#runeGlow)" />
+
+  <!-- Outer Runic Ring -->
+  <g filter="url(#cyanBlur)" stroke="#00f3ff" fill="none" stroke-width="2.5" opacity="0.9">
+    <ellipse cx="300" cy="165" rx="240" ry="72" stroke-dasharray="14, 8"/>
+    <ellipse cx="300" cy="165" rx="210" ry="63" stroke-dasharray="4, 4"/>
+    <ellipse cx="300" cy="165" rx="170" ry="51"/>
+    
+    <!-- Central Star / Runic Inscriptions -->
+    <ellipse cx="300" cy="165" rx="120" ry="36" stroke-dasharray="20, 6"/>
+    <ellipse cx="300" cy="165" rx="60" ry="18"/>
+    
+    <!-- Radiating Runic Spoke Lines -->
+    <line x1="130" y1="165" x2="470" y2="165" opacity="0.6"/>
+    <line x1="300" y1="114" x2="300" y2="216" opacity="0.6"/>
+    <line x1="180" y1="130" x2="420" y2="200" opacity="0.6"/>
+    <line x1="180" y1="200" x2="420" y2="130" opacity="0.6"/>
+  </g>
+
+  <!-- Glowing Glyphs -->
+  <g fill="#00f3ff" font-family="'Cinzel', serif" font-size="14" font-weight="bold" opacity="0.85" text-anchor="middle">
+    <text x="300" y="118">ᚲ</text>
+    <text x="490" y="169">ᛏ</text>
+    <text x="300" y="222">ᛉ</text>
+    <text x="110" y="169">ᚱ</text>
+    <text x="190" y="132">ᛊ</text>
+    <text x="410" y="132">ᚦ</text>
+    <text x="410" y="202">ᚨ</text>
+    <text x="190" y="202">ᚺ</text>
+  </g>
+</svg>

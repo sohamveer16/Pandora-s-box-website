@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Footer Styling — Retro Game Footer & Back-to-Top
+   ========================================================================== */
+
+.game-footer {
+  position: relative;
+  background: #01040a;
+  border-top: 2px solid #0f2742;
+  overflow: hidden;
+}
+
+.footer-content-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+/* Brand Col */
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-emblem {
+  width: 28px;
+  height: 28px;
+}
+
+.footer-title {
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+.footer-disclaimer {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.footer-backend-readiness {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--color-cyan-bright);
+  background: rgba(0, 243, 255, 0.05);
+  border: 1px dashed rgba(0, 243, 255, 0.3);
+  padding: 8px 12px;
+}
+
+/* Links Col */
+.footer-col-heading {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: var(--color-cyan-bright);
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+  padding-bottom: 8px;
+}
+
+.footer-link-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.link-arrow {
+  color: var(--color-cyan-dim);
+}
+
+.footer-link:hover {
+  color: var(--color-cyan-bright);
+  transform: translateX(4px);
+}
+
+/* Actions Col */
+.footer-actions-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-title-btn {
+  font-size: 0.82rem;
+  padding: 10px 14px;
+  background: rgba(8, 22, 38, 0.8);
+  border-color: #1a3c61;
+}
+
+.footer-scroll-top-btn {
+  background: #061524;
+  border: 1px solid #1a3d63;
+  color: var(--color-text-secondary);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.footer-scroll-top-btn:hover {
+  background: #0d2947;
+  border-color: var(--color-cyan-bright);
+  color: #ffffff;
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #000206;
+}
+
+.footer-bottom-inner {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copyright-text {
+  font-size: 0.74rem;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .footer-content-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

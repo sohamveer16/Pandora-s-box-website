@@ -1,0 +1,259 @@
+/* ==========================================================================
+   PANDORA'S BOX — Global Design System & Variables
+   ========================================================================== */
+
+:root {
+  /* Color Palette — Derived from reference screenshots */
+  --color-bg-abyss: #030712;
+  --color-bg-navy: #061221;
+  --color-bg-crypt: #0b1a2d;
+  --color-bg-elevated: #11263d;
+  --color-bg-panel: rgba(11, 26, 45, 0.85);
+
+  --color-cyan-glow: #00f3ff;
+  --color-cyan-bright: #67e8f9;
+  --color-cyan-dim: #0284c7;
+  --color-cyan-deep: #03446b;
+  
+  --color-amber-flame: #f59e0b;
+  --color-amber-glow: rgba(245, 158, 11, 0.4);
+  --color-ruby: #e11d48;
+  --color-gold-ancient: #d4af37;
+  
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #64748b;
+  --color-text-cyan: #38bdf8;
+
+  /* Typography Systems */
+  --font-pixel-title: 'Press Start 2P', monospace;
+  --font-pixel-ui: 'Pixelify Sans', 'VT323', monospace;
+  --font-fantasy-serif: 'Cinzel', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows & Glows */
+  --glow-cyan-sm: 0 0 8px rgba(0, 243, 255, 0.5);
+  --glow-cyan-md: 0 0 16px rgba(0, 243, 255, 0.65), 0 0 32px rgba(0, 243, 255, 0.25);
+  --glow-cyan-lg: 0 0 24px rgba(0, 243, 255, 0.8), 0 0 48px rgba(0, 243, 255, 0.4);
+  --glow-amber: 0 0 16px rgba(245, 158, 11, 0.6);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-abyss);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg-abyss);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Scrollbar with Pixel Aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-abyss);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border: 1px solid var(--color-cyan-dim);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyan-dim);
+  box-shadow: var(--glow-cyan-sm);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 243, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Typography Utility Classes */
+.font-pixel-title {
+  font-family: var(--font-pixel-title);
+  letter-spacing: 2px;
+}
+
+.font-pixel-ui {
+  font-family: var(--font-pixel-ui);
+  letter-spacing: 1px;
+}
+
+.font-fantasy {
+  font-family: var(--font-fantasy-serif);
+  letter-spacing: 1.5px;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Cyan Magical Glow Text */
+.text-cyan-glow {
+  color: var(--color-cyan-bright);
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.8), 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+.text-gold-glow {
+  color: #fef08a;
+  text-shadow: 0 0 10px rgba(234, 179, 8, 0.8);
+}
+
+/* Placeholder Tag Style */
+.placeholder-tag {
+  display: inline-block;
+  font-family: var(--font-pixel-ui);
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  color: var(--color-cyan-bright);
+  background: rgba(0, 243, 255, 0.08);
+  border: 1px dashed rgba(0, 243, 255, 0.4);
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin: 4px 0;
+  text-transform: uppercase;
+}
+
+/* Pixel Card / Frame */
+.pixel-box {
+  background: var(--color-bg-panel);
+  border: 2px solid #1c3d61;
+  box-shadow: inset 0 0 12px rgba(0, 243, 255, 0.05), 0 8px 32px rgba(0, 0, 0, 0.6);
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.pixel-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-cyan-glow);
+}
+
+.pixel-box::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-cyan-glow);
+}
+
+/* Pixel Game Button */
+.pixel-btn {
+  font-family: var(--font-pixel-ui);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--color-text-primary);
+  background: #0d2238;
+  border: 2px solid #234c75;
+  padding: 12px 28px;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pixel-btn:hover {
+  background: #143557;
+  border-color: var(--color-cyan-glow);
+  color: #ffffff;
+  box-shadow: var(--glow-cyan-md);
+  transform: translateY(-2px);
+}
+
+.pixel-btn:active {
+  transform: translateY(1px);
+  box-shadow: var(--glow-cyan-sm);
+}
+
+.pixel-btn.primary {
+  background: linear-gradient(180deg, #093452 0%, #051e33 100%);
+  border-color: var(--color-cyan-bright);
+  color: var(--color-cyan-bright);
+}
+
+.pixel-btn.primary:hover {
+  background: linear-gradient(180deg, #0e4c78 0%, #072a47 100%);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.7);
+}
+
+/* Subtle Screen Scanline Texture Overlay */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.01),
+    rgba(0, 255, 0, 0.005),
+    rgba(0, 0, 255, 0.01)
+  );
+  background-size: 100% 3px, 3px 100%;
+  z-index: 999;
+  opacity: 0.6;
+}
+
+/* Section Container */
+.section-wrapper {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 60px 16px;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

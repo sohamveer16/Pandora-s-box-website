@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" shape-rendering="crispEdges">
+  <!-- Pixel Art Pandora's Box Emblem -->
+  <!-- Outer aura -->
+  <rect x="18" y="14" width="28" height="36" fill="none" stroke="#00f3ff" stroke-width="1" opacity="0.3" />
+  
+  <!-- Box Base and Lid -->
+  <rect x="12" y="24" width="40" height="26" fill="#0c1726" stroke="#224263" stroke-width="2"/>
+  <rect x="10" y="18" width="44" height="8" fill="#152b45" stroke="#376899" stroke-width="2"/>
+  
+  <!-- Runic gold / bronze corner brackets -->
+  <rect x="10" y="18" width="6" height="4" fill="#d4af37"/>
+  <rect x="48" y="18" width="6" height="4" fill="#d4af37"/>
+  <rect x="12" y="44" width="6" height="6" fill="#b38f2a"/>
+  <rect x="46" y="44" width="6" height="6" fill="#b38f2a"/>
+  
+  <!-- Glowing Cyan Lock / Gem in Center -->
+  <rect x="28" y="22" width="8" height="12" fill="#000d1a" stroke="#00f3ff" stroke-width="1"/>
+  <rect x="30" y="26" width="4" height="4" fill="#00f3ff"/>
+  <rect x="31" y="27" width="2" height="2" fill="#ffffff"/>
+  
+  <!-- Mystic emission seams -->
+  <rect x="16" y="25" width="10" height="2" fill="#00f3ff" opacity="0.8"/>
+  <rect x="38" y="25" width="10" height="2" fill="#00f3ff" opacity="0.8"/>
+  <rect x="31" y="36" width="2" height="10" fill="#00f3ff" opacity="0.6"/>
+</svg>
